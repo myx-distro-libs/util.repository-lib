@@ -7,12 +7,15 @@ if [ -z "$APP" ] ; then
 	[ -d "$APP/source" ] || ( echo "expecting 'source' directory." >&2 && exit 1 )
 fi
 
-[ -f "$APP/source/myx/util.repository-myx/sh-lib/syncing.sh.include" ] /
-	|| (myx.common lib/gitCloneSync "$APP/source/myx/util.repository-myx" "git@github.com:myx/util.repository-myx.git")
-	
-. "$APP/source/myx/util.repository-myx/sh-lib/syncing.sh.include"
 
-async -2 gitSync "lib/util.repository-lib/"	           "git@github.com:myx-distro-libs/util.repository-lib.git"
+. "`myx.common which lib/async`"
+. "`myx.common which lib/gitCloneSync`"
+
+async(){
+	Async -2 GitCloneSync $@
+}
+
+async "lib/util.repository-lib/"	           "git@github.com:myx-distro-libs/util.repository-lib.git"
 
 wait
 

@@ -21,11 +21,12 @@ echo "Installing myx.common"
 FetchStdout(){
 	local URL="$1"
 	[ -z "$URL" ] && echo "FetchStdout: The URL is required!" && exit 1
-	
-	[ ! -z `which curl` ] && (curl --silent -L $URL && return 0 || exit 1) 
-	[ ! -z `which fetch` ] && (fetch -o - $URL && return 0 || exit 1)
-	[ ! -z `which wget` ] && (wget --quiet -O - $URL && return 0 || exit 1) 
-	
+	set -e
+
+	if [ ! -z "`which curl || true`" ]  ; then curl --silent -L $URL  ; return 0 ; fi
+	if [ ! -z "`which fetch || true`" ] ; then fetch -o - $URL        ; return 0 ; fi
+	if [ ! -z "`which wget || true`" ]  ; then wget --quiet -O - $URL ; return 0 ; fi
+
 	echo "ERROR: curl, fetch or wget were not found, do not know how to download!"
 	exit 1
 }

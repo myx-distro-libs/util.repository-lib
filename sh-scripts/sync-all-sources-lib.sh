@@ -7,13 +7,14 @@ if [ -z "$APP" ] ; then
 	[ -d "$APP/source" ] || ( echo "expecting 'source' directory." >&2 && exit 1 )
 fi
 
-[ -f "$APP/source/myx/util.repository-myx/sh-lib/syncing.sh.include" ] || ()
+[ -f "$APP/source/myx/util.repository-myx/sh-lib/syncing.sh.include" ] /
+	|| (myx.common lib/gitCloneSync "$APP/source/myx/util.repository-myx" "git@github.com:myx/util.repository-myx.git")
+	
 . "$APP/source/myx/util.repository-myx/sh-lib/syncing.sh.include"
 
 async -2 gitSync "lib/util.repository-lib/"	           "git@github.com:myx-distro-libs/util.repository-lib.git"
 
+wait
 
 INF="$APP/source/lib/util.repository-lib/data/repository/repository.inf"
 ( set -e ; echo "# copied from $INF at `date`" ; cat "$INF" ) > "$APP/source/lib/repository.inf"
-
-# wait

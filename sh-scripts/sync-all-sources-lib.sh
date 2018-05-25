@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
-if [ -z "$APP" ] ; then
+if [ -z "$MMDAPP" ] ; then
 	set -e
-	export APP="$( cd $(dirname "$0")/../../../.. ; pwd )"
-	echo "$0: Working in: $APP"  >&2
-	[ -d "$APP/source" ] || ( echo "expecting 'source' directory." >&2 && exit 1 )
+	export MMDAPP="$( cd $(dirname "$0")/../../../.. ; pwd )"
+	echo "$0: Working in: $MMDAPP"  >&2
+	[ -d "$MMDAPP/source" ] || ( echo "expecting 'source' directory." >&2 && exit 1 )
 fi
 
 
@@ -19,5 +19,5 @@ async "lib/util.repository-lib/"	           "git@github.com:myx-distro-libs/util
 
 wait
 
-INF="$APP/source/lib/util.repository-lib/data/repository/repository.inf"
-( set -e ; echo "# copied from $INF at `date`" ; cat "$INF" ) > "$APP/source/lib/repository.inf"
+INF="$MMDAPP/source/lib/util.repository-lib/data/repository/repository.inf"
+( set -e ; echo "# copied from $INF at `date`" ; cat "$INF" ) > "$MMDAPP/source/lib/repository.inf"

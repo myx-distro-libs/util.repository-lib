@@ -12,7 +12,7 @@ fi
 . "`myx.common which lib/gitCloneSync`"
 
 async(){
-	Async -2 GitCloneSync "$@"
+	Async -2 GitCloneSync "$MMDAPP/source/$@"
 }
 
 async "lib/util.repository-lib/"	           "git@github.com:myx-distro-libs/util.repository-lib.git"

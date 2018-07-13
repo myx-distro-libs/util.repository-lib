@@ -15,7 +15,10 @@ async(){
 	Async -2 GitCloneSync "$MMDAPP/source/$@"
 }
 
-async "lib/util.repository-lib/"	           "git@github.com:myx-distro-libs/util.repository-lib.git"
+async "lib/util.repository-lib/"	    		"git@github.com:myx-distro-libs/util.repository-lib.git"
+
+async "lib/lib.apache-commons-compress/"	    "git@github.com:myx-distro-libs/lib.apache-commons-compress.git"
+async "lib/lib.tukaani-xz-java/"			    "git@github.com:myx-distro-libs/lib.tukaani-xz-java.git"
 
 wait
 

@@ -11,7 +11,7 @@ test -z "$TGT_APP_PATH" && echo "'TGT_APP_PATH' env must be set" >&2 && exit 1
 
 #
 #
-# It will make sure that "myx.common" utility is installed and will install "myx/myx.distro-install" package into workspace
+# It will make sure that "myx.common" utility is installed and will install "myx/myx.distro-source" package into workspace
 #
 #
 

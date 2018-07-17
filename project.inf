@@ -1,4 +1,4 @@
-Type: ae3.Package
 Name: util.repository-lib
 Info: Repository actions package (with repository installer)
-Provides: lib/actions:actions 
+Requires: distro-source
+Provides: lib/actions:actions repository-lib 

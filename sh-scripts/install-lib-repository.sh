@@ -40,7 +40,7 @@ echo "Installing LIB repository into: $TGT_APP_PATH"
 
 export MMDAPP="$TGT_APP_PATH"
 
-myx.common git/cloneSync "$MMDAPP/source/lib/util.repository-lib" "git@github.com:myx-distro-libs/util.repository-lib.git"
+myx.common git/clonePull "$MMDAPP/source/lib/util.repository-lib" "git@github.com:myx-distro-libs/util.repository-lib.git"
 
 ############
 echo "Done."

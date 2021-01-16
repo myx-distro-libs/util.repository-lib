@@ -7,7 +7,7 @@
 ####
 
 TGT_APP_PATH="${TGT_APP_PATH:-$1}"
-test -z "$TGT_APP_PATH" && echo "'TGT_APP_PATH' env must be set" >&2 && exit 1
+test -z "$TGT_APP_PATH" && echo "ERROR: 'TGT_APP_PATH' env must be set" >&2 && exit 1
 
 #
 #
@@ -20,14 +20,14 @@ echo "Installing myx.common"
 
 FetchStdout(){
 	local URL="$1"
-	[ -z "$URL" ] && echo "FetchStdout: The URL is required!" && exit 1
+	[ -z "$URL" ] && echo "ERROR: FetchStdout: The URL is required!" >&2 && exit 1
 	set -e
 
 	if [ ! -z "`which curl || true`" ]  ; then curl --silent -L $URL  ; return 0 ; fi
 	if [ ! -z "`which fetch || true`" ] ; then fetch -o - $URL        ; return 0 ; fi
 	if [ ! -z "`which wget || true`" ]  ; then wget --quiet -O - $URL ; return 0 ; fi
 
-	echo "ERROR: curl, fetch or wget were not found, do not know how to download!"
+	echo "ERROR: curl, fetch or wget were not found, do not know how to download!" >&2
 	exit 1
 }
 

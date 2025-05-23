@@ -2,3 +2,4 @@ Name: util.repository-lib
 Info: Repository actions package (with repository installer)
 Requires: distro-source
 Provides: lib/actions:actions repository-lib 
+Declares: distro-repository-sync:sh-scripts/sync-all-sources-lib.sh

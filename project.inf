@@ -3,7 +3,7 @@ Info: Repository actions package (with repository installer)
 Requires: distro-source
 Provides: lib/actions:actions repository-lib 
 Declares: \
-	distro-image-sync:source-prepare:pull:repo:lib/util.repository-lib:git@github.com:lib/util.repository-lib.git \
-	distro-image-sync:source-prepare:pull:exec:.:sh-scripts/sync-all-sources-lib.sh \
+	distro-image-sync:source-prepare-pull:repo:lib/util.repository-lib:git@github.com:lib/util.repository-lib.git \
+	distro-image-sync:source-prepare-pull:exec:.:sh-scripts/sync-all-sources-lib.sh \
 	distro-repository-sync:sh-scripts/sync-all-sources-lib.sh \
 

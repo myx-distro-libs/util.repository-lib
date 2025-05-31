@@ -42,5 +42,8 @@ export MMDAPP="$TGT_APP_PATH"
 
 myx.common git/clonePull "$MMDAPP/source/lib/util.repository-lib" "git@github.com:myx-distro-libs/util.repository-lib.git"
 
+INF="$MMDAPP/source/lib/util.repository-lib/sh-data/repository/repository.inf"
+( set -e ; echo "# copied from $INF at `date`" ; cat "$INF" ) > "$MMDAPP/source/lib/repository.inf"
+
 ############
 echo "Done."

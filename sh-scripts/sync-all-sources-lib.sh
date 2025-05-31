@@ -23,5 +23,5 @@ async "lib/lib.tukaani-xz-java/"			    "git@github.com:myx-distro-libs/lib.tukaa
 
 wait
 
-INF="$MMDAPP/source/lib/util.repository-lib/data/repository/repository.inf"
+INF="$MMDAPP/source/lib/util.repository-lib/sh-data/repository/repository.inf"
 ( set -e ; echo "# copied from $INF at `date`" ; cat "$INF" ) > "$MMDAPP/source/lib/repository.inf"

@@ -1,0 +1,4 @@
+lib/util.repository-lib/	    		git@github.com:myx-distro-libs/util.repository-lib.git
+
+lib/lib.apache-commons-compress/	    git@github.com:myx-distro-libs/lib.apache-commons-compress.git
+lib/lib.tukaani-xz-java/			    git@github.com:myx-distro-libs/lib.tukaani-xz-java.git

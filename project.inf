@@ -4,5 +4,6 @@ Requires: distro-source
 Provides: lib/actions:actions repository-lib 
 Declares: \
 	distro-image-sync:source-prepare-pull:repo:lib/util.repository-lib::git@github.com:myx-distro-libs/util.repository-lib.git \
-	distro-image-sync:source-prepare-pull:exec:.:sh-scripts/sync-all-sources-lib.sh \
-	distro-repository-sync:sh-scripts/sync-all-sources-lib.sh \
+	distro-image-sync:source-prepare-pull:list:.:sh-data/repository/remotes-list-lib.txt \
+	--distro-image-sync:source-prepare-pull:exec:.:sh-scripts/sync-all-sources-lib.sh \
+	--distro-repository-sync:sh-scripts/sync-all-sources-lib.sh \

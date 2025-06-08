@@ -1,6 +1,5 @@
 Name: util.repository-lib
 Info: Repository actions package (with repository installer)
-Requires: distro-source
 Provides: lib/actions:actions repository-lib 
 Declares: \
 	distro-image-sync:source-prepare-pull:repo:lib/util.repository-lib::git@github.com:myx-distro-libs/util.repository-lib.git \

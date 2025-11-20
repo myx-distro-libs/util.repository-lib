@@ -23,9 +23,9 @@ FetchStdout(){
 	[ -z "$URL" ] && echo "ERROR: FetchStdout: The URL is required!" >&2 && exit 1
 	set -e
 
-	if [ ! -z "`which curl || true`" ]  ; then curl --silent -L $URL  ; return 0 ; fi
-	if [ ! -z "`which fetch || true`" ] ; then fetch -o - $URL        ; return 0 ; fi
-	if [ ! -z "`which wget || true`" ]  ; then wget --quiet -O - $URL ; return 0 ; fi
+	if command -v curl >/dev/null 2>&1  ; then curl --silent -L $URL  ; return 0 ; fi
+	if command -v fetch >/dev/null 2>&1 ; then fetch -o - $URL        ; return 0 ; fi
+	if command -v wget >/dev/null 2>&1  ; then wget --quiet -O - $URL ; return 0 ; fi
 
 	echo "ERROR: curl, fetch or wget were not found, do not know how to download!" >&2
 	exit 1

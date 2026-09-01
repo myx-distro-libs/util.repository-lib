@@ -1,8 +1,17 @@
 lib/util.repository-lib/	    		git@github.com:myx-distro-libs/util.repository-lib.git
 
-lib/lib.apache-commons-compress/	    git@github.com:myx-distro-libs/lib.apache-commons-compress.git
-lib/lib.tukaani-xz-java/			    git@github.com:myx-distro-libs/lib.tukaani-xz-java.git
-lib/lib.sevenzip-lzma-sdk/		    git@github.com:myx-distro-libs/lib.sevenzip-lzma-sdk.git
-lib/lib.jexcelapi-jxl/			    git@github.com:myx-distro-libs/lib.jexcelapi-jxl.git
-lib/lib.lowagie-itext/			    git@github.com:myx-distro-libs/lib.lowagie-itext.git
-lib/lib.saxonica-saxon-he/		    git@github.com:myx-distro-libs/lib.saxonica-saxon-he.git
+lib/lib.apache-commons-compress/		git@github.com:myx-distro-libs/lib.apache-commons-compress.git
+lib/lib.tukaani-xz-java/				git@github.com:myx-distro-libs/lib.tukaani-xz-java.git
+lib/lib.sevenzip-lzma-sdk/				git@github.com:myx-distro-libs/lib.sevenzip-lzma-sdk.git
+lib/lib.jexcelapi-jxl/					git@github.com:myx-distro-libs/lib.jexcelapi-jxl.git
+lib/lib.lowagie-itext/					git@github.com:myx-distro-libs/lib.lowagie-itext.git
+lib/lib.saxonica-saxon-he/				git@github.com:myx-distro-libs/lib.saxonica-saxon-he.git
+lib/lib.h2database-h2/					git@github.com:myx-distro-libs/lib.h2database-h2.git
+lib/lib.hsqldb-hypersql/				git@github.com:myx-distro-libs/lib.hsqldb-hypersql.git
+lib/lib.mobixess-jodb/					git@github.com:myx-distro-libs/lib.mobixess-jodb.git
+lib/lib.mysql-connector-j/				git@github.com:myx-distro-libs/lib.mysql-connector-j.git
+lib/lib.oracle-jdbc/					git@github.com:myx-distro-libs/lib.oracle-jdbc.git
+lib/lib.postgresql-pgjdbc/				git@github.com:myx-distro-libs/lib.postgresql-pgjdbc.git
+lib/lib.db4objects-db4o/				git@github.com:myx-distro-libs/lib.db4objects-db4o.git
+lib/lib.famfamfam-silk/					git@github.com:myx-distro-libs/lib.famfamfam-silk.git
+lib/lib.jfree-jfreechart/				git@github.com:myx-distro-libs/lib.jfree-jfreechart.git
